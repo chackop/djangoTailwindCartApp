@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="post" class="mx-auto mt-16 max-w-xl sm:mt-20">
+  {% csrf_token %} {{form.as_p}}
+  <input
+    type="submit"
+    class="bg-orange-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-orange-500"
+  />
+</form>
+
+{% endblock %}

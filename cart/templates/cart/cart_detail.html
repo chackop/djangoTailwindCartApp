@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<div class="group relative m-3">
+  <h3 class="m-3 text-lg font-semibold leading-6 text-gray-900">
+    {{cartitem.title}} - {{cartitem.price}}
+  </h3>
+
+  <a
+    href="{% url 'cart.list' %}"
+    class="bg-orange-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-orange-500"
+    >Back</a
+  >
+  <a
+    href="{% url 'cart.update' pk=cartitem.id %}"
+    class="bg-orange-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-orange-500"
+    >Edit</a
+  >
+
+  <a
+    href="{% url 'cart.delete' pk=cartitem.id %}"
+    class="bg-red-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-red-500"
+    >Delete</a
+  >
+</div>
+
+{% endblock %}

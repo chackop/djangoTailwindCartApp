@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="my-5">These are the cart items:</h1>
+
+<div class="flex max-w-xl flex-col items-start justify-between m-3">
+  {% for item in cartitems %}
+  <div class="flex items-center gap-x-4 text-xs m-3">
+    <a
+      href="{% url 'cart.detail' pk=item.id %}"
+      class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+    >
+      {{item.title}} - {{item.price|truncatechars:10}}
+    </a>
+  </div>
+  {% endfor %}
+
+  <h3 class="m-3 font-medium text-gray-600">Total {{cartitems.price_total}}</h3>
+</div>
+{% endblock %}

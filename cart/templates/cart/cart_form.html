@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="POST" class="m-3">
+  {% csrf_token %} {{ form.as_p }}
+
+  <button
+    type="submit"
+    class="bg-orange-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-orange-500"
+  >
+    Submit
+  </button>
+
+  <a
+    href="{% url 'cart.list'%}"
+    class="bg-orange-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-orange-500"
+    >Cancel</a
+  >
+</form>
+
+{% if form.errors %}
+<div class="text-red rounded-md px-3 py-2 text-sm font-medium">
+  {{form.errors.title.as_text}}
+</div>
+{% endif %} {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<form method="post">
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{cartitem.title}}"?</p>
+  <p>This action can't be undone</p>
+
+  <input
+    type="submit"
+    class="bg-red-700 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-red-500"
+    value="Confirm"
+  />
+</form>
+
+{% endblock %}
