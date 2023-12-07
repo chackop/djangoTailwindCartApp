@@ -11,12 +11,13 @@ Run Server
 # Demo
 
 Registration and Login
-![Register:Login - Cart App](Register:Login - Cart App.gif)
+![Register:Login - Cart App](demo/Register:Login%20-%20Cart%20App.gif)
 
 Add Items
-![Add Items - Cart App](Add Items - Cart App.gif)
+![Add Items - Cart App](demo/Add%20Items%20-%20Cart%20App.gif)
+
 
 Edit, Delete an Item and logout
-![Edit:Delete Items - Cart App](Edit:Delete Items - Cart App.gif) 
+![Edit:Delete Items - Cart App](demo/Edit:Delete%20Items%20-%20Cart%20App.gif)
 
 
